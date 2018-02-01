@@ -7,7 +7,7 @@ cd "$SCRIPTPATH/.."
 hide() {
   for d in *.py[co]; do
     if [ -f "$d" ]; then
-      echo "    $d"
+      echo $d
     fi
   done | tee "$(pwd)/.hidden" > /dev/null
 }
