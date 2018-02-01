@@ -15,7 +15,7 @@ hide() {
 recursive() {
   for d in *; do
     if [ -d "$d" ]; then
-      (hide)
+      (cd -- "$d" && hide)
       (cd -- "$d" && recursive)
     fi
   done
